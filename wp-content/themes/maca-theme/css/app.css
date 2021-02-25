@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+:root {
+    --menu-color: rgb(49,47,47);
+    --highlight-color: rgb(91, 146, 103);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+header {
+    width: 100vw;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .menu-main-menu-container {
+    height: 100%;
+    width: 100vw;
+    background-color: var(--menu-color);
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+header .menu {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+header .menu li {
+    border-right: 2px solid white;
+    position: relative;
+}
+
+header .menu li:last-child {
+    border-right: none;
+}
+
+header .menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1.5rem;
+}
+
+header .menu li.current-menu-item::after {
+    position: absolute;
+    content: '';
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--highlight-color);
+}
+
+.container {
+    width: 70vw;
+    min-width: 900px;
+    margin: 2rem auto;
+}
+
+.archive-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .post-preview {
+    background: rgba(60, 155, 103, 0.288);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.container .post-preview h3 {
+    margin: 0;
+}
+
+.container .title {
+    position: relative;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    width: 30%;
+    text-align: center;
+    color: white;
+    background: var(--highlight-color);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+    z-index: 0;
+}
+
+.container .post_navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .post_navigation div > * {
+    background-color: var(--menu-color);
+    color: white;
+    border-radius: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem 0.6rem;
+}
+
+/* section .title::after {
+    position: absolute;
+    content: '';
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(87, 87, 87);
+    box-shadow: 0 0 10px 5px black;
+    z-index: -1;
+} */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 70px;
+    background-color: var(--menu-color);
+    color: white;
+}
